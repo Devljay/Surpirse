@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+    <title>Surprise</title>
+</head>
+
+
+<body>
+    <canvas id="confetti"></canvas>
+
+    <div id="party-info">
+
+        <h2>Happy 3rd Anniversary</h2>
+        <button class="learn-more"> <a href="https://devljay.github.io/happy-3rd-anniversary/">🎉</a>
+        </button>
+
+
+        </button>
+    </div>
+    <script>
+        const targetDate = new Date('2020-11-29T00:00:00Z');
+
+        function updateCountdown() {
+            const currentDate = new Date();
+            const timeDifference = currentDate - targetDate;
+            const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            document.getElementById('countdown').textContent = `Happy ${daysDifference} days together as GF/BF`;
+        }
+    </script>
+
+</body>
+
+</html>
